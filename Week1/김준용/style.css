@@ -1,0 +1,161 @@
+html,body {
+    margin:0;
+    padding: 0;
+    background-color: #f2f4f9;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-div{
+    margin: 0;
+    padding-left: 10%;
+}
+
+.main-content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px; /* Space before the footer starts */
+}
+
+.PII-addon{
+    display: block;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 14px;
+    margin-bottom: 2px;
+    margin-top: 11px;
+}
+
+.border-title {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.border-subtitle {
+    padding-top: 0px;
+    margin-top: 0px;
+    color:gray;
+    font-size: small;
+}
+
+.TOP {
+    background-color: white;
+    display: block; 
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    
+    top: 0;
+    padding: 10px 10%; 
+    overflow: hidden; 
+}
+
+.TOP-header {
+    font-size: 20px;
+    color: #0164fc;
+}
+
+.post-item-category {
+    display: inline-block;
+    color: blue;
+    background-color: #e8f0ff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.announcement-boxes {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.post-item-title{
+    margin-top: 0px;
+    margin-bottom: 4px;
+    font-size: 22px;
+}
+
+.post-item-summary-addon {
+    margin-top:8px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.post-item-title a:hover{
+    color: #2563eb;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.post-item-info {
+    color: gray;
+    font-size: 14px;
+}
+
+.post-item-spacing {
+    margin-right: 10px; 
+}
+
+.FOOTER-ADDON {
+    text-align: center; 
+    color: gray;
+    font-size: 12px;
+    bottom: 0;
+    margin: 0;
+}
+
+.bt {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    display: inline-block;
+    background-color: rgb(236, 236, 236);
+    padding: 5px 10px 5px 10px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    font-size: 17px;
+    transition:  0.3s ease;
+}
+
+a.bt:hover {
+    background-color: rgba(151, 151, 151, 0.723);
+}
+
+footer.TOP {
+    flex-shrink: 0;
+    border-bottom: none;
+    border-top: 2px solid lightgray;
+}
+
+.post-comment-line {
+    display: block;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    margin: 0px
+}
+
+.PCL-p {
+    color: #807f7d;
+    font-size: 12px;
+}
+
+
+
