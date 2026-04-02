@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background-color: #f4f6fb;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.topbar {
+  background-color: white;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 20px 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 28px;
+  color: #3b82f6;
+}
+
+main.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.post-box,
+.comment-box {
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.comment-box {
+  margin-top: 20px;
+}
+
+.category {
+  display: inline-block;
+  background-color: #e8f0ff;
+  color: #2563eb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.post-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 30px;
+}
+
+.post-info {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.post-info span {
+  margin-right: 12px;
+}
+
+.post-content p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.btn:hover {
+  background-color: #eef2ff;
+}
+
+.comment-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.comment-item {
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background-color: #fafafa;
+}
+
+.comment-info {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.comment-info strong {
+  color: #222;
+  margin-right: 10px;
+}
+
+.comment-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.board-header {
+  margin-bottom: 20px;
+}
+
+.board-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.board-description {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.post-list {
+  margin-top: 20px;
+}
+
+.post-item {
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.post-item:hover {
+  background-color: #f9fbff;
+  border-color: #cfdcf8;
+}
+
+.post-item-category {
+  display: inline-block;
+  background-color: #e8f0ff;
+  color: #2563eb;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.post-item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.post-item-title a:hover {
+  color: #2563eb;
+}
+
+.post-item-summary {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.post-item-info {
+  font-size: 14px;
+  color: #777;
+}
+
+.post-item-info span {
+  margin-right: 12px;
+}
+
+.footer {
+  border-top: 1px solid #dcdcdc;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
