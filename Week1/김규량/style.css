@@ -1,0 +1,246 @@
+/* 기본 설정 및 웹 폰트 적용 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background-color: #f4f6f9;
+    color: #212529;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 상단 헤더 (Topbar) --- */
+.topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 16px 24px;
+}
+
+.topbar-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4263eb;
+    margin: 0;
+}
+
+.logo a {
+    color: #4263eb;
+}
+
+/* --- 공통 메인 컨테이너 --- */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- 공통 뱃지 스타일 --- */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.badge.notice { background-color: #e7f5ff; color: #339af0; }
+.badge.question { background-color: #f3f0ff; color: #845ef7; }
+.badge.free { background-color: #f8f9fa; color: #495057; border: 1px solid #e9ecef; padding: 3px 11px; }
+
+/* === index.html (게시판 목록) 스타일 === */
+.board-header {
+    margin-bottom: 32px;
+}
+
+.board-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #212529;
+}
+
+.board-script {
+    font-size: 15px;
+    color: #868e96;
+    margin: 0;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-item {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+}
+
+.post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.post-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #212529;
+    transition: color 0.2s;
+}
+
+.post-item:hover .post-item-title {
+    color: #4263eb;
+}
+
+.post-item-summary {
+    font-size: 15px;
+    color: #495057;
+    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-info {
+    font-size: 13px;
+    color: #adb5bd;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.post-info span:not(:last-child)::after {
+    content: "·";
+    margin-left: 8px;
+    color: #dee2e6;
+}
+
+/* === post.html (게시글 상세) 스타일 === */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.post-detail-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #212529;
+}
+
+.post-detail-info {
+    font-size: 14px;
+    color: #868e96;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #f1f3f5;
+    margin-bottom: 24px;
+}
+
+.post-contents {
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.post-contents p {
+    margin-bottom: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #f8f9fa;
+}
+
+/* --- 댓글 영역 --- */
+.comments-header {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+.comment-item {
+    border: 1px solid #f1f3f5;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+}
+
+.comment-item:last-child {
+    margin-bottom: 0;
+}
+
+.comment-meta {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-author {
+    font-size: 14px;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.comment-date {
+    font-size: 13px;
+    color: #adb5bd;
+}
+
+.comment-text {
+    font-size: 15px;
+    color: #495057;
+    margin: 0;
+}
+
+/* --- 공통 푸터 --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #adb5bd;
+}
