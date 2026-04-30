@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1 class="logo">Board Study</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="post-box"></section>
+      <section class="comment-box"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Board Study</p>
+      </div>
+    </footer>
+
+    <script src="./posts-data.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const postId = Number(params.get("id"));
+
+      const post = posts.find((item) => item.id === postId);
+
+      const postBox = document.querySelector(".post-box");
+      const commentBox = document.querySelector(".comment-box");
+
+      if (!post) {
+        postBox.innerHTML = `
+          <div class="category">오류</div>
+          <h2 class="post-title">게시글을 찾을 수 없습니다.</h2>
+          <div class="post-content">
+            <p>잘못된 접근이거나 삭제된 게시글입니다.</p>
+          </div>
+          <a href="./posts.html" class="btn">목록으로</a>
+        `;
+
+        commentBox.innerHTML = `
+          <h2 class="comment-title">댓글 0개</h2>
+        `;
+      } else {
+        const contentHTML = post.content
+          .map((text) => `<p>${text}</p>`)
+          .join("");
+
+        postBox.innerHTML = `
+          <div class="category">${post.category}</div>
+          <h2 class="post-title">${post.title}</h2>
+          <div class="post-info">
+            <span>작성자: ${post.author}</span>
+            <span>작성일: ${post.date}</span>
+            <span>조회수: ${post.views}</span>
+          </div>
+          <div class="post-content">
+            ${contentHTML}
+          </div>
+          <a href="./posts.html" class="btn">목록으로</a>
+        `;
+
+        const comments = post.comments || [];
+
+        if (comments.length === 0) {
+          commentBox.innerHTML = `
+            <h2 class="comment-title">댓글 0개</h2>
+            <div class="comment-item">
+              <p>아직 댓글이 없습니다.</p>
+            </div>
+          `;
+        } else {
+          const commentsHTML = comments
+            .map(
+              (comment) => `
+                <div class="comment-item">
+                  <div class="comment-info">
+                    <strong>${comment.author}</strong>
+                    <span>${comment.date}</span>
+                  </div>
+                  <p>${comment.text}</p>
+                </div>
+              `
+            )
+            .join("");
+
+          commentBox.innerHTML = `
+            <h2 class="comment-title">댓글 ${comments.length}개</h2>
+            ${commentsHTML}
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>

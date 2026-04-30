@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- [1] 메타·제목·스타일: 1주차와 동일하게 연결 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 목록</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- [2] 상단 헤더: 목록/상세 공통 레이아웃 -->
+    <header class="topbar">
+      <div class="container">
+        <h1 class="logo">Board Study</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- [3] 게시판 제목 영역: 정적 HTML (JS로 안 바꿔도 됨) -->
+      <section class="board-header">
+        <h2 class="board-title">게시판</h2>
+        <p class="board-description">
+          스터디 공지사항과 게시글을 확인해보세요.
+        </p>
+      </section>
+
+      <!--
+        [4] 목록만 비워 두기
+        - 1주차: 여기에 <article class="post-item">…</article> 를 여러 개 직접 썼음
+        - 2주차: 비운 뒤 id로 JS가 이 안을 채움 (innerHTML)
+      -->
+      <section class="post-list" id="post-list"></section>
+    </main>
+
+    <!-- [5] 푸터: 스티키 푸터 CSS로 창 하단 정렬 (style.css 참고) -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Board Study</p>
+      </div>
+    </footer>
+
+    <!--
+      [6] 스크립트 순서 중요
+      1) posts-data.js → 전역 변수 posts 배열 정의
+      2) posts.js → posts 를 읽어서 #post-list 에 그림
+      순서 바꾸면 posts is not defined 오류 남!!
+    -->
+    <script src="./posts-api.js"></script>
+    <script src="./posts.js"></script>
+  </body>
+</html>

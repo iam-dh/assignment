@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+  [2주차] post.html 역할
+  - 이번 주 실습의 “메인”은 posts.html + posts-data.js + posts.js (목록 렌더링) 입니다.
+  - 상세 페이지는 1주차 때 만든 정적 HTML을 그대로 두고, 목록에서 “목록으로” 링크만 연결해 둡니다.
+  - 이후 주차에서 글 id별 상세 내용을 JS로 채우는 식으로 확장할 수 있습니다.
+-->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- [1단계] 공통 헤더 -->
+    <header class="topbar">
+      <div class="container">
+        <h1 class="logo">Board Study</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- [2단계] 본문 카드: 카테고리 → 제목 → 메타 → 본문 -->
+      <section class="post-box">
+        <div class="category">공지</div>
+        <h2 class="post-title">프론트엔드 스터디 1주차 안내</h2>
+
+        <div class="post-info">
+          <span>작성자: 관리자</span>
+          <span>작성일: 2026.03.16</span>
+          <span>조회수: 128</span>
+        </div>
+
+        <div class="post-content">
+          <p>안녕하세요. 프론트엔드 스터디 1주차 안내입니다.</p>
+          <p>
+            이번 주차에서는 HTML과 CSS를 활용해 게시글 상세 페이지를 직접
+            만들어보며, 프론트엔드의 기본적인 화면 구성 방식을 익힙니다.
+          </p>
+          <p>
+            시맨틱 태그를 사용해 문서 구조를 나누고, CSS로 여백, 글자 크기,
+            색상, 버튼 스타일 등을 적용해보는 것이 핵심입니다.
+          </p>
+          <p>
+            과제는 오늘 만든 페이지를 바탕으로 제목, 작성자, 본문 내용을
+            자유롭게 변경해서 본인만의 게시글 상세 페이지를 다시 만들어보는
+            것입니다.
+          </p>
+        </div>
+
+        <!-- [3단계] 목록 페이지로 돌아가기 (같은 week2 폴더의 posts.html) -->
+        <a href="./posts.html" class="btn">목록으로</a>
+      </section>
+
+      <!-- [4단계] 댓글 영역 (정적 예시) -->
+      <section class="comment-box">
+        <h2 class="comment-title">댓글 2개</h2>
+
+        <div class="comment-item">
+          <div class="comment-info">
+            <strong>김학생</strong>
+            <span>2026.03.16 14:10</span>
+          </div>
+          <p>HTML 구조를 먼저 잡고 CSS를 입히는 흐름이 이해하기 쉬웠습니다.</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-info">
+            <strong>박스터디</strong>
+            <span>2026.03.16 14:22</span>
+          </div>
+          <p>다음 주에 목록 페이지까지 연결되면 더 게시판 같아질 것 같아요.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- [5단계] 공통 푸터 -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Board Study</p>
+      </div>
+    </footer>
+  </body>
+</html>
