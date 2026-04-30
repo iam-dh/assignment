@@ -1,0 +1,39 @@
+<!doctype html>
+<!--
+  [2주차] post.html 역할
+  - 이번 주 실습의 “메인”은 posts.html + posts-data.js + posts.js (목록 렌더링) 입니다.
+  - 상세 페이지는 1주차 때 만든 정적 HTML을 그대로 두고, 목록에서 “목록으로” 링크만 연결해 둡니다.
+  - 이후 주차에서 글 id별 상세 내용을 JS로 채우는 식으로 확장할 수 있습니다.
+-->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- [1단계] 공통 헤더 -->
+    <header class="topbar">
+      <div class="container">
+        <h1 class="logo">Board Study</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <!--[2단계] 본문 카드: 카테고리 -->
+      <section class="post-box" id="post-detail"></section>
+      <section class="comment-box" id="comment-section"></section>
+    </main>
+
+    <!-- [5단계] 공통 푸터 -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Board Study</p>
+      </div>
+    </footer>
+    <!--동적 페이지 연결-->
+    <script src="./posts-api.js"></script>
+    <script src="./post.js"></script>
+  </body>
+</html>
